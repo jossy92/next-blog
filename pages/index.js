@@ -329,8 +329,8 @@ export default function Index({posts,category}) {
 
 Index.getInitialProps = async ()=>{
     const [posts, category] = await Promise.all([
-     fetch('http://localhost:3000/api/posts').then(r=>r.json()),
-     fetch('http://localhost:3000/api/category').then(r=>r.json()),
+     fetch('https://next-blog-de52zon11.vercel.app/api/posts').then(r=>r.json()),
+     fetch('https://next-blog-de52zon11.vercel.app/api/category').then(r=>r.json()),
     ])
    
     return { posts, category }
