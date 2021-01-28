@@ -3,7 +3,6 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Sidebar from '../components/Sidebar'
-import { useStateValue } from '../contextApi/StateProvider';
 import Post from '../components/Post'
 import fetch from "isomorphic-unfetch";
 //import { WOW } from "wow.js";
@@ -39,7 +38,6 @@ function SampleNextArrow(props) {
 
 export default function Index({posts,category}) {
     const router = useRouter();  
-    const [{user}, dispatch ] = useStateValue ()
     const [data, setData] = useState([]);
     useEffect(() => {
         setData(posts.data)

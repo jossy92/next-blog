@@ -1,8 +1,8 @@
 import '../styles/globals.css'
 import '../styles/style.css'
 
-import reducer, {initialState} from '../contextApi/reducer'
-import {StateProvider } from "../contextApi/StateProvider"
+import reducer, {initialState} from '../contextApi/reducer.js'
+import {StateProvider } from "../contextApi/StateProvider.js"
 
 if (typeof window !== "undefined") {
   require("jquery");
@@ -18,12 +18,11 @@ import Layout from '../components/Layout'
 function MyApp({ Component, pageProps }) {
   return (
    
-        <StateProvider initialState = {initialState}
-          reducer = {reducer}>
+       
           <Layout>
             <Component {...pageProps} />
           </Layout>
-        </StateProvider>
+       
     
   )
 }
