@@ -1,6 +1,6 @@
 import {useState} from 'react'
 import SidePost from './SidePost'
-import Link from 'next/Link';
+import Link from 'next/link';
 import ScrollAnimation from 'react-animate-on-scroll';
 import "animate.css/animate.min.css";
 

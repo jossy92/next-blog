@@ -1,12 +1,12 @@
 import TimeAgo from 'timeago-react';
 import { useEffect, useState } from "react"
-import { useStateValue } from '../contextApi/StateProvider';
+//import { useStateValue } from '../contextApi/StateProvider';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
 
 function Comment({comment, deleteComment}) {
     
-    const [{user}, dispatch ] = useStateValue ()
+   // const [{user}, dispatch ] = useStateValue ()
     const [shortCommentStyle, setShortCommentStyle] = useState({display: 'block', fontWeight:'lighter'})
     const [longCommentStyle, setLongCommentStyle] = useState({display: 'none'})
   

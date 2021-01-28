@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faUser,faCalendar,faArrowRight,faEye } from '@fortawesome/free-solid-svg-icons'
-import Link from 'next/Link';
+import Link from 'next/link';
 import moment from 'moment'
 import ScrollAnimation from 'react-animate-on-scroll';
 import "animate.css/animate.min.css";

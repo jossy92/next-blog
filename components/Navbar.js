@@ -1,5 +1,5 @@
 
-import Link from 'next/Link';
+import Link from 'next/link';
 import {useEffect} from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {   faTwitter, faFacebook, faInstagram, faYoutube} from '@fortawesome/free-brands-svg-icons';

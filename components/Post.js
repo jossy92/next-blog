@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faUser,faCalendar,faArrowRight,faEye,faEdit, faTrash } from '@fortawesome/free-solid-svg-icons'
-import Link from 'next/Link';
+import Link from 'next/link';
 import moment from 'moment'
 import CommentComponent from './CommentComponent'
 
