@@ -3,8 +3,8 @@ import Link from 'next/Link';
 import {useEffect} from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {   faTwitter, faFacebook, faInstagram, faYoutube} from '@fortawesome/free-brands-svg-icons';
-import { actionTypes } from '../contextApi/reducer';
-import { useStateValue } from '../contextApi/StateProvider';
+//import { actionTypes } from '../contextApi/reducer';
+//import { useStateValue } from '../contextApi/StateProvider';
 import {useRouter} from 'next/router'
 
 const Navbar = () =>{

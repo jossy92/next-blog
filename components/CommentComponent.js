@@ -4,10 +4,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faComment,faUpload } from '@fortawesome/free-solid-svg-icons'
 import Comment from './Comment'
-import { useStateValue } from '../contextApi/StateProvider';
+//import { useStateValue } from '../contextApi/StateProvider';
 function CommentComponent({postId, comments, setNoOfComment}) {
    
-    const [{user}, dispatch ] = useStateValue ()
+    //const [{user}, dispatch ] = useStateValue ()
     const [data, setData] = useState([]);
     const [isLoading, setLoading] = useState(true);
     const errStyle = { color: "red", fontSize: "12px" };
