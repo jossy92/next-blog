@@ -44,8 +44,8 @@ export default function Index({posts,category}) {
 Index.getInitialProps = async ({query})=>{
   
     const [posts, category] = await Promise.all([
-     fetch(`http://localhost:3000/api/posts?category=${query.category}`).then(r=>r.json()),
-     fetch('http://localhost:3000/api/category').then(r=>r.json()),
+     fetch(`${process.env.HOST_URL}/api/posts?category=${query.category}`).then(r=>r.json()),
+     fetch(`${process.env.HOST_URL}/api/category`).then(r=>r.json()),
     ])
    
     return { posts, category }

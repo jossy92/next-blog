@@ -18,7 +18,7 @@ function Post({post,frontPost,content,comments,deletePost}) {
       if(content){
         setNoOfComment(comments.data?.length)
         setViews(post.data.views+1)
-        fetch(`http://localhost:3000/api/posts/${post.data._id}`,{
+        fetch(`${process.env.HOST_URL}/api/posts/${post.data._id}`,{
             method:'PUT',
             headers:{
                 "Content-Type":"application/json",

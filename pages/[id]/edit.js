@@ -1,6 +1,7 @@
 
 import {useState} from 'react';
 import {useRouter} from 'next/router'
+
 function EditPost({post}) {
        //Checks Fields
        const router = useRouter();  
@@ -94,7 +95,7 @@ function EditPost({post}) {
            })
 
         }else{
-            fetch(`http://localhost:3000/api/posts/${post._id}`,{
+            fetch(`${process.env.HOST_URL}/api/posts/${post._id}`,{
       method:'PUT',
       headers:{
           "Content-Type":"application/json",
@@ -117,7 +118,7 @@ function EditPost({post}) {
     }
     const postDetails = (data)=>{
   
-     fetch(`http://localhost:3000/api/posts/${post._id}`,{
+     fetch(`${process.env.HOST_URL}/api/posts/${post._id}`,{
       method:'PUT',
       headers:{
           "Content-Type":"application/json",
@@ -224,7 +225,7 @@ const updatePic = (file)=>{
 
 EditPost.getInitialProps = async ({ query: { id}})=>{
 
-    const res = await fetch(`http://localhost:3000/api/posts/${id}`)
+    const res = await fetch(`${process.env.HOST_URL}/api/posts/${id}`)
     const {data} = await res.json();
 
        return { post:data }

@@ -24,10 +24,10 @@ function Index({post,posts,category,comments}) {
 Index.getInitialProps = async ({ query: { id}})=>{
 
     const [post,posts, category,comments] = await Promise.all([
-         fetch(`http://localhost:3000/api/posts/${id}`).then(r=>r.json()),
-         fetch('http://localhost:3000/api/posts').then(r=>r.json()),
-        fetch('http://localhost:3000/api/category').then(r=>r.json()),
-        fetch(`http://localhost:3000/api/comments?post_id=${id}`).then(r=>r.json()),
+         fetch(`${process.env.HOST_URL}/api/posts/${id}`).then(r=>r.json()),
+         fetch(`${process.env.HOST_URL}/api/posts`).then(r=>r.json()),
+        fetch(`${process.env.HOST_URL}/api/category`).then(r=>r.json()),
+        fetch(`${process.env.HOST_URL}/api/comments?post_id=${id}`).then(r=>r.json()),
        ])
       
     

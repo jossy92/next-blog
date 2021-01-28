@@ -49,7 +49,7 @@ function CommentComponent({postId, comments, setNoOfComment}) {
        const isValid = formValidation();
         if (isValid) {
 
-            fetch('http://localhost:3000/api/comments',{
+            fetch(`${process.env.HOST_URL}/api/comments`,{
                 method:'POST',
                 headers:{
                     "Content-Type":"application/json",

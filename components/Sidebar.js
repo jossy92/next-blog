@@ -19,7 +19,7 @@ function Sidebar({posts,category}) {
             return
         }
 
-        fetch('http://localhost:3000/api/subscriber',{
+        fetch(`${process.env.HOST_URL}/api/subscriber`,{
                 method:'POST',
                 headers:{
                     "Content-Type":"application/json",

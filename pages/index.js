@@ -103,7 +103,7 @@ export default function Index({posts,category}) {
       const deletePost = (postId)=>{
          const Delete = confirm('are you sure you want to delete this post');
              if(Delete){
-            fetch(`http://localhost:3000/api/posts/${postId}`,{
+            fetch(`${process.env.HOST_URL}/api/posts/${postId}`,{
                 method:"delete",
                 headers:{
                     "Content-Type":"application/json",
@@ -329,8 +329,8 @@ export default function Index({posts,category}) {
 
 Index.getInitialProps = async ()=>{
     const [posts, category] = await Promise.all([
-     fetch('https://next-blog-de52zon11.vercel.app/api/posts').then(r=>r.json()),
-     fetch('https://next-blog-de52zon11.vercel.app/api/category').then(r=>r.json()),
+     fetch(`${process.env.HOST_URL}/api/posts`).then(r=>r.json()),
+     fetch(`${process.env.HOST_URL}/api/category`).then(r=>r.json()),
     ])
    
     return { posts, category }
