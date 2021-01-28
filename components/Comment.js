@@ -41,9 +41,7 @@ function Comment({comment, deleteComment}) {
                     <br/>{longComment()}
                   
           </div>
-          <div>
-            {user &&  <FontAwesomeIcon style={{color:'red',width:'20px',height:'20px',textAlign:'end'}} icon={faTrash} onClick={()=>deleteComment(comment._id)}/>}
-          </div>  
+          
      </div>
    <hr />
 </>
